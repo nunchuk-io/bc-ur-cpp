@@ -41,8 +41,8 @@ Include `<ur.h>` to encode or decode Uniform Resources.
 
 using namespace nunchuk::bcr;
  
-std::vector<std::string> workloads = EncodeUniformResource(HexToBytes("...");
-std::vector<uint8_t> raw = DecodeUniformResource(workloads);
+std::vector<std::string> payload = EncodeUniformResource(HexToBytes("...");
+std::vector<uint8_t> raw = DecodeUniformResource(payload);
 ```
 
 ##  License
