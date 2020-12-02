@@ -1,21 +1,23 @@
-# UR-CPP
+# BC-UR-CPP
 
-Implementation of [BCR-0004](https://github.com/CoboVault/Research/blob/master/papers/bcr-0004-bc32.md) and [BCR-0005](https://github.com/CoboVault/Research/blob/master/papers/bcr-0005-ur.md)
+This is a C++ implementation of [BCR-0004](https://github.com/CoboVault/Research/blob/master/papers/bcr-0004-bc32.md) and [BCR-0005](https://github.com/CoboVault/Research/blob/master/papers/bcr-0005-ur.md)
+
+Use this library to interface with airgapped hardware wallets such as [Cobo Vault](https://github.com/CoboVault/cobo-vault-cold) using QR codes.
 
 ## Installation
 
-Add `ur-cpp` as a submodule in a larger CMake project.
+Add `bc-ur-cpp` as a submodule in a larger CMake project.
 
 ```bash
 $ cd your_project/
-$ git submodule add https://github.com/nunchuk-io/ur-cpp
+$ git submodule add https://github.com/nunchuk-io/bc-ur-cpp
 $ git submodule update --init --recursive
 ```
 
 Add the following to your `CMakeLists.txt`.
 
 ```cmake
-add_subdirectory(ur-cpp)
+add_subdirectory(bc-ur-cpp)
 target_link_libraries("${PROJECT_NAME}" PUBLIC ur)
 ```
 
@@ -45,4 +47,4 @@ std::vector<uint8_t> raw = DecodeUniformResource(workloads);
 
 ##  License
 
-`ur-cpp` is released under the terms of the MIT license. See [COPYING](COPYING) for more information or see https://opensource.org/licenses/MIT.
+`bc-ur-cpp` is released under the terms of the MIT license. See [COPYING](COPYING) for more information or see https://opensource.org/licenses/MIT.
