@@ -3,6 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <bc32.h>
+#include <stdexcept>
 
 namespace nunchuk {
 namespace bcr {
