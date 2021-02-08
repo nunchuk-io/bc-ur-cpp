@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+if(WIN32)
+    target_compile_options("${PROJECT_NAME}" PUBLIC /MT)
+    target_link_options("${PROJECT_NAME}" PUBLIC /INCREMENTAL:NO /NODEFAULTLIB:MSVCRT)
+endif()
+
 add_library("${PROJECT_NAME}" STATIC 
     src/bc32.cpp 
     src/ur.cpp 
