@@ -13,7 +13,7 @@ add_library("${PROJECT_NAME}" STATIC
     src/utils.cpp
 )
 
-if(WIN32)
+if (WIN32 AND MSVC)
     target_compile_options("${PROJECT_NAME}" PUBLIC /MT)
     target_link_options("${PROJECT_NAME}" PUBLIC /INCREMENTAL:NO /NODEFAULTLIB:MSVCRT)
 endif()
